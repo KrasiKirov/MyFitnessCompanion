@@ -1,0 +1,121 @@
+﻿/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    margin: 0;
+    padding: 50px 0;
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+div.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    margin: 10px 10px 10px 0;
+    flex: none; /* This prevents the label from flexing */
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="date"],
+button {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+    flex: 2;
+}
+
+button {
+    margin: 20px auto;
+    flex: none; /* This prevents the button from flexing and taking full width */
+    padding: 10px 20px; /* Horizontal padding adjusted to make the button wider */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+#exerciseTable .delete_button {
+    background-color: red !important;
+    color: white !important;
+    border: solid !important;
+}
+
+/* Message Style */
+#message {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Table Styles */
+#exerciseTable {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+    #exerciseTable th,
+    #exerciseTable td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    #exerciseTable th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: 500;
+    }
+
+    #exerciseTable tbody tr:nth-child(even) {
+        background-color: #f9f9f9 !important;
+    }
+
+    #exerciseTable tr:hover {
+        background-color: #f0f0f0;
+    }
+
+/* Column widths */
+.col-exercise {
+    width: 40%;
+}
+
+.col-duration {
+    width: 30%;
+}
+
+.col-date {
+    width: 20%;
+}
+
+.col-action {
+    width: 10%;
+}

@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Exercise Tracker";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Exercise Tracker</h2>
+
+    <!-- Add Exercise Form -->
+    <div class="form-container">
+        <label for="exerciseName">Exercise: 
+            <input type="text" id="exerciseName" placeholder="Enter exercise">
+        </label>
+        
+        <label for="exerciseDuration">Duration:
+            <input type="text" id="exerciseDuration" placeholder="Enter duration">
+        </label>
+        
+        <label for="exerciseDate">Date:
+            <input type="date" id="exerciseDate">
+        </label>
+        
+        <button onclick="addExercise()">Add Exercise</button>
+    </div>
+    <!-- Message Display -->
+    <p id="message"></p>
+
+    <table id="exerciseTable">
+        <tr>
+            <th class="col-exercise">Exercise</th>
+            <th class="col-duration">Duration</th>
+            <th class="col-date">Date</th>
+            <th class="col-action">Action</th>
+        </tr>
+    </table>
+
+    <script>
+        var exercises = [];
+
+        function addExercise() {
+            var name = document.getElementById('exerciseName').value;
+            var duration = document.getElementById('exerciseDuration').value;
+            var date = document.getElementById('exerciseDate').value;
+
+            if (name === "" || duration === "" || date === "") {
+                document.getElementById('message').textContent = "All fields are required!";
+                return;
+            }
+
+            var exercise = {
+                name: name,
+                duration: duration,
+                date: date
+            };
+            exercises.push(exercise);
+            appendExerciseToTable(exercise);
+
+            // Clear the message and input fields after adding
+            document.getElementById('message').textContent = "";
+            document.getElementById('exerciseName').value = "";
+            document.getElementById('exerciseDuration').value = "";
+            document.getElementById('exerciseDate').value = "";
+
+            // Save to localStorage
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+        }
+
+        function appendExerciseToTable(exercise) {
+            var table = document.getElementById('exerciseTable');
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.innerHTML = exercise.name;
+            cell2.innerHTML = exercise.duration;
+            cell3.innerHTML = exercise.date;
+
+            // Add a delete button for each row
+            cell4.innerHTML = `<button class="delete_button" onclick="deleteExercise(this)" style="background-color: red; color: white; border: solid;">Delete</button>`;
+        }
+
+        function deleteExercise(button) {
+            var table = document.getElementById('exerciseTable');
+            var rowIndex = button.parentElement.parentElement.rowIndex;
+            table.deleteRow(rowIndex);
+            exercises.splice(rowIndex - 1, 1); // Subtract 1 because of the header row
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('exercises')) {
+                exercises = JSON.parse(localStorage.getItem('exercises'));
+                exercises.forEach(exercise => {
+                    appendExerciseToTable(exercise);
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+
+

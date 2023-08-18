@@ -1,0 +1,56 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.goal-setting {
+    width: 500px;
+    background: white;
+    margin: 2em auto;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .goal-setting h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 1em;
+    }
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: .5em;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: .8em;
+        border: 1px solid #ddd;
+        border-radius: .3em;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .form-group button {
+        padding: .8em 1.5em;
+        background: #007BFF;
+        color: white;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background .3s;
+    }
+
+        .form-group button:hover {
+            background: #0056b3;
+        }

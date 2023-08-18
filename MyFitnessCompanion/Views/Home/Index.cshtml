@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    ViewBag.IsAuthenticated = User.Identity.IsAuthenticated;
+}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="path_to_your_CSS_file.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container text-center py-5">
+        <h1>Welcome to <span class="app-title">MyFitnessCompanion</span></h1>
+        <p class="tagline">Your Personal Guide to a Healthier Lifestyle</p>
+        <hr>
+        <p class="description">Take control of your fitness and nutrition goals with our easy-to-use tracking tools, personalized recommendations, and more.</p>
+        <a class="btn" href="@(ViewBag.IsAuthenticated ? "/Dashboard" : "/Identity/Account/Login")">Get Started</a>
+    </div>
+
+    <div class="features-container">
+        <div class="feature">
+            <i class="fas fa-dumbbell icon"></i>
+            <h5>Exercise Tracking</h5>
+            <p>Log and monitor your workouts to gain insights into your exercise habits and progress.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-utensils icon"></i>
+            <h5>Nutrition Tracking</h5>
+            <p>Keep track of your daily food intake and view a breakdown of your daily calorie and macronutrient consumption.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-chart-line icon"></i>
+            <h5>Progress Tracking</h5>
+            <p>Monitor your progress towards fitness goals by visualizing your data over time.</p>
+        </div>
+    </div>
+</body>
+
+</html>

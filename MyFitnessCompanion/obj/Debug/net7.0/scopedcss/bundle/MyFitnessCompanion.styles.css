@@ -1,0 +1,509 @@
+/* _content/MyFitnessCompanion/Views/About/Index.cshtml.rz.scp.css */
+/* Global Styles */
+.container[b-p3upb7uulv] {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h1[b-p3upb7uulv], h2[b-p3upb7uulv], h3[b-p3upb7uulv] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p[b-p3upb7uulv] {
+    margin-bottom: 1.5rem;
+}
+
+/* About Sections */
+.about-section h2[b-p3upb7uulv] {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Key Features */
+.key-features[b-p3upb7uulv] {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feature-grid[b-p3upb7uulv] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* changed to space-between for equal spacing */
+}
+
+.feature-card[b-p3upb7uulv] {
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+    .feature-card:hover[b-p3upb7uulv] {
+        transform: translateY(-10px); /* Hover effect */
+    }
+
+.icon-container[b-p3upb7uulv] {
+    font-size: 2.5rem; /* Increased icon size */
+    margin-bottom: 15px;
+    background-color: #e6e6e6; /* Background for icons */
+    border-radius: 50%; /* Makes it circular */
+    padding: 15px;
+    display: inline-block;
+}
+
+.feature-card h3[b-p3upb7uulv] {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .feature-card[b-p3upb7uulv] {
+        width: 100%;
+    }
+}
+
+.center-text[b-p3upb7uulv] {
+    text-align: center; /* adjusted centering method */
+}
+/* _content/MyFitnessCompanion/Views/Dashboard/Index.cshtml.rz.scp.css */
+body[b-icc8vmsuqm] {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7; /* Slightly different shade for better visibility */
+    margin: 0;
+    padding: 0;
+}
+
+.container[b-icc8vmsuqm] {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card[b-icc8vmsuqm] {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+    .card i[b-icc8vmsuqm] {
+        margin-bottom: 10px;
+        margin-right: 0; /* We no longer need the right margin as we're centering everything */
+    }
+
+    .card div[b-icc8vmsuqm] { /* Added this rule to wrap the text and allow for proper centering */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card:hover[b-icc8vmsuqm] {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .card h2[b-icc8vmsuqm] {
+        margin: 0;
+        font-size: 24px;
+        flex-grow: 1; /* Takes up remaining space after icon */
+    }
+
+    .card p[b-icc8vmsuqm] {
+        color: #7a7a7a; /* Slightly greyed out text for a softer look */
+    }
+
+    .card i[b-icc8vmsuqm] {
+        margin-right: 20px;
+        font-size: 2em;
+        color: #4CAF50; /* A green shade for a fitness theme */
+    }
+/* _content/MyFitnessCompanion/Views/ExerciseTracker/Index.cshtml.rz.scp.css */
+/* Base Styles */
+body[b-49at2frcj5] {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    margin: 0;
+    padding: 50px 0;
+    font-size: 16px;
+}
+
+h2[b-49at2frcj5] {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+div.form-container[b-49at2frcj5] {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label[b-49at2frcj5] {
+    margin: 10px 10px 10px 0;
+    flex: none; /* This prevents the label from flexing */
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+input[type="text"][b-49at2frcj5],
+input[type="date"][b-49at2frcj5],
+button[b-49at2frcj5] {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+    flex: 2;
+}
+
+button[b-49at2frcj5] {
+    margin: 20px auto;
+    flex: none; /* This prevents the button from flexing and taking full width */
+    padding: 10px 20px; /* Horizontal padding adjusted to make the button wider */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+    button:hover[b-49at2frcj5] {
+        background-color: #45a049;
+    }
+
+#exerciseTable .delete_button[b-49at2frcj5] {
+    background-color: red !important;
+    color: white !important;
+    border: solid !important;
+}
+
+/* Message Style */
+#message[b-49at2frcj5] {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Table Styles */
+#exerciseTable[b-49at2frcj5] {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+    #exerciseTable th[b-49at2frcj5],
+    #exerciseTable td[b-49at2frcj5] {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    #exerciseTable th[b-49at2frcj5] {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: 500;
+    }
+
+    #exerciseTable tbody tr:nth-child(even)[b-49at2frcj5] {
+        background-color: #f9f9f9 !important;
+    }
+
+    #exerciseTable tr:hover[b-49at2frcj5] {
+        background-color: #f0f0f0;
+    }
+
+/* Column widths */
+.col-exercise[b-49at2frcj5] {
+    width: 40%;
+}
+
+.col-duration[b-49at2frcj5] {
+    width: 30%;
+}
+
+.col-date[b-49at2frcj5] {
+    width: 20%;
+}
+
+.col-action[b-49at2frcj5] {
+    width: 10%;
+}
+/* _content/MyFitnessCompanion/Views/GoalSetting/Index.cshtml.rz.scp.css */
+body[b-9dhv7m8ot5] {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.goal-setting[b-9dhv7m8ot5] {
+    width: 500px;
+    background: white;
+    margin: 2em auto;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .goal-setting h1[b-9dhv7m8ot5] {
+        text-align: center;
+        color: #333;
+        margin-bottom: 1em;
+    }
+
+.form-group[b-9dhv7m8ot5] {
+    margin-bottom: 1em;
+}
+
+    .form-group label[b-9dhv7m8ot5] {
+        display: block;
+        margin-bottom: .5em;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-group input[b-9dhv7m8ot5], .form-group textarea[b-9dhv7m8ot5] {
+        width: 100%;
+        padding: .8em;
+        border: 1px solid #ddd;
+        border-radius: .3em;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .form-group button[b-9dhv7m8ot5] {
+        padding: .8em 1.5em;
+        background: #007BFF;
+        color: white;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background .3s;
+    }
+
+        .form-group button:hover[b-9dhv7m8ot5] {
+            background: #0056b3;
+        }
+/* _content/MyFitnessCompanion/Views/Home/Index.cshtml.rz.scp.css */
+body[b-s6i57988iy] {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container[b-s6i57988iy] {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.app-title[b-s6i57988iy] {
+    color: #2a8efb;
+    font-weight: 700;
+}
+
+.tagline[b-s6i57988iy] {
+    font-weight: 300;
+    color: #888;
+    font-size: 1.4rem;
+}
+
+.description[b-s6i57988iy] {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+hr[b-s6i57988iy] {
+    border: none;
+    border-top: 2px solid #e7e7e7;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.btn[b-s6i57988iy] {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2a8efb;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    .btn:hover[b-s6i57988iy] {
+        background-color: #1e6ad5;
+    }
+
+.features-container[b-s6i57988iy] {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.feature[b-s6i57988iy] {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .feature:hover[b-s6i57988iy] {
+        transform: translateY(-10px);
+    }
+
+.icon[b-s6i57988iy] {
+    font-size: 2rem;
+    color: #2a8efb;
+    margin-bottom: 20px;
+}
+/* _content/MyFitnessCompanion/Views/MealPlanner/Index.cshtml.rz.scp.css */
+body[b-aaod8tgjjt] {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container[b-aaod8tgjjt] {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header[b-aaod8tgjjt] {
+    text-align: center;
+    padding: 20px 0;
+}
+
+form.meal-planner[b-aaod8tgjjt] {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.form-group[b-aaod8tgjjt] {
+    margin-bottom: 20px;
+}
+
+    .form-group label[b-aaod8tgjjt] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-group input[b-aaod8tgjjt], .form-group textarea[b-aaod8tgjjt] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+button[b-aaod8tgjjt] {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover[b-aaod8tgjjt] {
+        background-color: #449d44;
+    }
+/* _content/MyFitnessCompanion/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-e21mv1dpcc] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-e21mv1dpcc] {
+  color: #0077cc;
+}
+
+.btn-primary[b-e21mv1dpcc] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-e21mv1dpcc], .nav-pills .show > .nav-link[b-e21mv1dpcc] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-e21mv1dpcc] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-e21mv1dpcc] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-e21mv1dpcc] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-e21mv1dpcc] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-e21mv1dpcc] {
+/*  position: absolute;*/
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.custom-nav-link[b-e21mv1dpcc] {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    .custom-nav-link:hover[b-e21mv1dpcc] {
+        background-color: rgba(42, 142, 251, 0.1); /* Light blue background on hover */
+        text-decoration: none;
+    }
