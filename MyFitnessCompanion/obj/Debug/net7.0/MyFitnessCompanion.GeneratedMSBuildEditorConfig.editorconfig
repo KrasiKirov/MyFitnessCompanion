@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyFitnessCompanion
 build_property.RootNamespace = MyFitnessCompanion
-build_property.ProjectDir = C:\Users\krasimir.kirov\source\repos\MyFitnessCompanion\MyFitnessCompanion\
+build_property.ProjectDir = C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\krasimir.kirov\source\repos\MyFitnessCompanion\MyFitnessCompanion
+build_property.MSBuildProjectDirectory = C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_AuthLayout.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Help/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Help/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVscFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/NutritionTracker/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/NutritionTracker/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cml0aW9uVHJhY2tlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Privacy/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Privacy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/ProgressTracking/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/ProgressTracking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3Jlc3NUcmFja2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/Error.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/_ViewImports.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/_ViewStart.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/About/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-p3upb7uulv
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Dashboard/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-icc8vmsuqm
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/ExerciseTracker/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/ExerciseTracker/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VUcmFja2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-49at2frcj5
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/GoalSetting/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/GoalSetting/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29hbFNldHRpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9dhv7m8ot5
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Home/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-s6i57988iy
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/MealPlanner/Index.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/MealPlanner/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVhbFBsYW5uZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-aaod8tgjjt
 
-[C:/Users/krasimir.kirov/source/repos/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/_Layout.cshtml]
+[C:/Users/krasi/OneDrive - McGill University/Desktop/MyFitnessCompanion/MyFitnessCompanion/MyFitnessCompanion/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e21mv1dpcc

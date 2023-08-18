@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krasimir.kirov\\source\\repos\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {}
+    "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krasimir.kirov\\source\\repos\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {
+    "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krasimir.kirov\\source\\repos\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+        "projectUniqueName": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
         "projectName": "MyFitnessCompanion",
-        "projectPath": "C:\\Users\\krasimir.kirov\\source\\repos\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
-        "packagesPath": "C:\\Users\\krasimir.kirov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krasimir.kirov\\source\\repos\\MyFitnessCompanion\\MyFitnessCompanion\\obj\\",
+        "projectPath": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+        "packagesPath": "C:\\Users\\krasi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\krasimir.kirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\krasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
