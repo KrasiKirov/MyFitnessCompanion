@@ -2,7 +2,7 @@
 
 namespace MyFitnessCompanion.Controllers
 {
-    public class ProgressTrackingController : Controller
+    public class ProgressTrackerController : Controller
     {
         public IActionResult Index()
         {

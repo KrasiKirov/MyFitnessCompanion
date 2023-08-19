@@ -1,32 +1,109 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Goals Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="goal-setting">
-        <h1>Goal Setting</h1>
-        <form action="/submit-goal" method="post">
-            <div class="form-group">
-                <label for="title">Goal Title</label>
-                <input type="text" id="title" name="title" required>
-            </div>
-            <div class="form-group">
-                <label for="desc">Goal Description</label>
-                <textarea id="desc" name="desc" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="start">Start Date</label>
-                <input type="date" id="start" name="start" required>
-            </div>
-            <div class="form-group">
-                <label for="end">End Date</label>
-                <input type="date" id="end" name="end" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+    <div class="dashboard">
+        <h1>Your Goals</h1>
+
+        <div class="add-goal-form">
+            <input type="text" id="goalInput" placeholder="Enter your goal...">
+            <button id="addGoalButton">Add Goal</button>
+        </div>
+
+        <!-- Dynamic goals will be added here -->
     </div>
+<script>
+    document.getElementById('addGoalButton').addEventListener('click', function () {
+        let goalValue = document.getElementById('goalInput').value.trim();
+
+        if (goalValue) {
+            // Creating the goal container
+            let goalContainer = document.createElement('div');
+            goalContainer.className = 'goal';
+            goalContainer.style.backgroundColor = '#fff';
+            goalContainer.style.marginTop = '20px';
+            goalContainer.style.padding = '15px';
+            goalContainer.style.borderRadius = '8px';
+            goalContainer.style.display = 'flex';
+            goalContainer.style.justifyContent = 'space-between';
+            goalContainer.style.alignItems = 'center';
+            goalContainer.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+
+            // Creating the goal title
+            let goalTitle = document.createElement('div');
+            goalTitle.className = 'goal-title';
+            goalTitle.textContent = goalValue;
+            goalTitle.style.flex = '2';
+            goalTitle.style.color = '#555';
+            goalTitle.style.fontWeight = 'bold';
+
+            // Creating the "See Progress" button
+            let goalProgressButton = document.createElement('button');
+            goalProgressButton.className = 'goal-progress';
+            goalProgressButton.textContent = 'See Progress';
+            goalProgressButton.style.flex = '1';
+            goalProgressButton.style.padding = '10px';
+            goalProgressButton.style.marginLeft = '10px';
+            goalProgressButton.style.border = 'none';
+            goalProgressButton.style.borderRadius = '5px';
+            goalProgressButton.style.backgroundColor = '#4CAF50';
+            goalProgressButton.style.color = '#fff';
+            goalProgressButton.style.cursor = 'pointer';
+            goalProgressButton.style.transition = 'background-color 0.3s ease';
+            goalProgressButton.onmouseover = function () {
+                this.style.backgroundColor = '#43A047';
+            };
+            goalProgressButton.onmouseout = function () {
+                this.style.backgroundColor = '#4CAF50';
+            };
+            goalProgressButton.addEventListener('click', function () {
+                window.location.href = 'Dashboard/ProgressTracker';
+            });
+
+            // Creating the "Remove" button
+            let removeButton = document.createElement('button');
+            removeButton.className = 'remove-goal';
+            removeButton.textContent = 'Remove';
+            removeButton.style.flex = '1';
+            removeButton.style.padding = '10px';
+            removeButton.style.marginLeft = '10px';
+            removeButton.style.border = 'none';
+            removeButton.style.borderRadius = '5px';
+            removeButton.style.backgroundColor = '#F44336';
+            removeButton.style.color = '#fff';
+            removeButton.style.cursor = 'pointer';
+            removeButton.style.transition = 'background-color 0.3s ease';
+            removeButton.onmouseover = function () {
+                this.style.backgroundColor = '#E53935';
+            };
+            removeButton.onmouseout = function () {
+                this.style.backgroundColor = '#F44336';
+            };
+            removeButton.addEventListener('click', function () {
+                goalContainer.remove();
+            });
+
+            // Appending the child elements to the goal container
+            goalContainer.appendChild(goalTitle);
+            goalContainer.appendChild(goalProgressButton);
+            goalContainer.appendChild(removeButton);
+
+            // Insert the new goal after the form
+            document.querySelector('.add-goal-form').insertAdjacentElement('afterend', goalContainer);
+
+            // Clear the input
+            document.getElementById('goalInput').value = '';
+        }
+    });
+</script>
 </body>
 </html>
