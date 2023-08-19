@@ -1,3 +1,180 @@
-﻿@{
-    ViewData["Title"] = "Progress Tracker";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="progress-container">
+        <h1>Progress Tracker</h1>
+        <!-- Dynamic progress sections will be added here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadProgressSections();
+        });
+
+        function loadProgressSections() {
+            let goals = JSON.parse(localStorage.getItem('goals')) || [];
+            goals.forEach(g => {
+                addProgressSection(g.goal);
+            });
+        }
+
+        function addProgressSection(goalTitle) {
+            let container = document.querySelector('.progress-container');
+            container.style.maxWidth = '800px';
+            container.style.margin = '50px auto';
+            container.style.padding = '20px';
+            container.style.backgroundColor = '#fff';
+            container.style.borderRadius = '10px';
+            container.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+
+            let progressSection = document.createElement('div');
+            progressSection.className = 'progress-section';
+            progressSection.style.marginBottom = '20px';
+            progressSection.style.padding = '30px';
+            progressSection.style.borderRadius = '12px';
+            progressSection.style.backgroundColor = '#fff';
+            progressSection.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+
+            let title = document.createElement('h2');
+            title.textContent = goalTitle;
+            title.style.color = '#2d3748';
+            title.style.fontSize = '1.5em';
+            title.style.marginBottom = '10px';
+            title.style.borderBottom = '1px solid #edf2f7';
+            title.style.paddingBottom = '10px';
+            progressSection.appendChild(title);
+
+            let initialValueLabel = document.createElement('label');
+            initialValueLabel.textContent = "Initial value: ";
+            initialValueLabel.style.display = 'block';
+            initialValueLabel.style.marginBottom = '8px';
+            initialValueLabel.style.color = '#555';
+            let initialValueInput = document.createElement('input');
+            initialValueInput.type = "number";
+            initialValueInput.style.width = '100%';
+            initialValueInput.style.padding = '10px';
+            initialValueInput.style.border = '1px solid #d0d0d0';
+            initialValueInput.style.borderRadius = '4px';
+            initialValueInput.style.boxShadow = '0 1px 5px rgba(0, 0, 0, 0.05)';
+            initialValueLabel.appendChild(initialValueInput);
+            progressSection.appendChild(initialValueLabel);
+
+            let inputGroup = document.createElement('div');
+            inputGroup.style.marginBottom = '15px';
+            let input = document.createElement('input');
+            input.type = "number";
+            input.placeholder = "Progress 1";
+            input.style.padding = '8px';
+            input.style.border = '1px solid #d0d0d0';
+            input.style.borderRadius = '4px';
+            inputGroup.appendChild(input);
+            progressSection.appendChild(inputGroup);
+
+            let addButton = document.createElement('button');
+            addButton.textContent = "Add Progress Input";
+            addButton.style.padding = '8px 12px';
+            addButton.style.backgroundColor = '#48bb78';
+            addButton.style.color = '#ffffff';
+            addButton.style.border = 'none';
+            addButton.style.borderRadius = '4px';
+            addButton.style.cursor = 'pointer';
+            addButton.style.transition = 'background-color 0.3s ease';
+            addButton.onmouseover = function () {
+                addButton.style.backgroundColor = '#38a169';
+            }
+            addButton.onmouseout = function () {
+                addButton.style.backgroundColor = '#48bb78';
+            }
+            let progressCount = 1;
+            addButton.onclick = function () {
+                if (progressCount < 5) {
+                    let newInput = document.createElement('input');
+                    newInput.type = "number";
+                    progressCount++;
+                    newInput.placeholder = `Progress ${progressCount}`;
+                    newInput.style.padding = '8px';
+                    newInput.style.border = '1px solid #d0d0d0';
+                    newInput.style.borderRadius = '4px';
+                    inputGroup.appendChild(newInput);
+                } else {
+                    alert("You've reached the maximum number of progress inputs.");
+                }
+            };
+            progressSection.appendChild(addButton);
+
+            let goalInputLabel = document.createElement('label');
+            goalInputLabel.textContent = "Objective value: ";
+            goalInputLabel.style.display = 'block';
+            goalInputLabel.style.marginTop = '15px';
+            goalInputLabel.style.color = '#555';
+            let goalInput = document.createElement('input');
+            goalInput.type = "number";
+            goalInput.style.width = '100%';
+            goalInput.style.padding = '10px';
+            goalInput.style.border = '1px solid #d0d0d0';
+            goalInput.style.borderRadius = '4px';
+            goalInput.style.boxShadow = '0 1px 5px rgba(0, 0, 0, 0.05)';
+            goalInputLabel.appendChild(goalInput);
+            progressSection.appendChild(goalInputLabel);
+
+            let progressBar = document.createElement('div');
+            progressBar.style.height = '20px';
+            progressBar.style.marginTop = '20px';
+            progressBar.style.border = '1px solid #d0d0d0';
+            progressBar.style.borderRadius = '10px';
+            progressBar.style.backgroundColor = '#e2e8f0';
+            let progressFill = document.createElement('div');
+            progressFill.style.height = '100%';
+            progressFill.style.width = '0%';
+            progressFill.style.backgroundColor = '#48bb78';
+            progressFill.style.transition = 'width 0.3s ease';
+            progressBar.appendChild(progressFill);
+            progressSection.appendChild(progressBar);
+
+            let saveButton = document.createElement('button');
+            saveButton.textContent = "Save Progress";
+            saveButton.style.padding = '8px 12px';
+            saveButton.style.backgroundColor = '#48bb78';
+            saveButton.style.color = '#ffffff';
+            saveButton.style.border = 'none';
+            saveButton.style.borderRadius = '4px';
+            saveButton.style.cursor = 'pointer';
+            saveButton.style.transition = 'background-color 0.3s ease';
+            saveButton.style.marginTop = '1em';
+            saveButton.onmouseover = function () {
+                saveButton.style.backgroundColor = '#38a169';
+            }
+            saveButton.onmouseout = function () {
+                saveButton.style.backgroundColor = '#48bb78';
+            }
+            saveButton.onclick = function () {
+                let lastProgressInput = inputGroup.lastChild;
+                let lastProgressValue = parseFloat(lastProgressInput.value);
+                let goalValue = parseFloat(goalInput.value);
+                let initialValue = parseFloat(initialValueInput.value);
+
+                let progressPercentage = ((lastProgressValue - initialValue) / (goalValue - initialValue)) * 100;
+                progressFill.style.width = `${progressPercentage}%`;
+
+                let goals = JSON.parse(localStorage.getItem('goals')) || [];
+                let currentGoal = goals.find(g => g.goal === goalTitle);
+                if (currentGoal) {
+                    currentGoal.progress = Array.from(inputGroup.children).map(input => parseFloat(input.value));
+                    currentGoal.goalValue = goalValue;
+                    currentGoal.initialValue = initialValue;
+                    localStorage.setItem('goals', JSON.stringify(goals));
+                }
+            };
+            progressSection.appendChild(saveButton);
+
+            container.appendChild(progressSection);
+        }
+    </script>
+</body>
+</html>

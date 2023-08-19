@@ -12,7 +12,7 @@
 }
 
 .app-title {
-    color: #2a8efb;
+    color: #4CAF50;
     font-weight: 700;
 }
 
@@ -38,7 +38,7 @@ hr {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #2a8efb;
+    background-color: #4CAF50;
     color: #fff;
     text-transform: uppercase;
     border: none;
@@ -72,6 +72,6 @@ hr {
 
 .icon {
     font-size: 2rem;
-    color: #2a8efb;
+    color: #4CAF50;
     margin-bottom: 20px;
 }

@@ -12,7 +12,7 @@ body[b-s6i57988iy] {
 }
 
 .app-title[b-s6i57988iy] {
-    color: #2a8efb;
+    color: #4CAF50;
     font-weight: 700;
 }
 
@@ -38,7 +38,7 @@ hr[b-s6i57988iy] {
 .btn[b-s6i57988iy] {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #2a8efb;
+    background-color: #4CAF50;
     color: #fff;
     text-transform: uppercase;
     border: none;
@@ -72,6 +72,6 @@ hr[b-s6i57988iy] {
 
 .icon[b-s6i57988iy] {
     font-size: 2rem;
-    color: #2a8efb;
+    color: #4CAF50;
     margin-bottom: 20px;
 }
