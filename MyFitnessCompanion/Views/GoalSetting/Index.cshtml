@@ -4,10 +4,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Goals Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,74 +24,106 @@
         <!-- Dynamic goals will be added here -->
     </div>
 <script>
-    document.getElementById('addGoalButton').addEventListener('click', function () {
-        let goalValue = document.getElementById('goalInput').value.trim();
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load goals when the page loads
+            loadGoals();
 
-        if (goalValue) {
+            document.getElementById('addGoalButton').addEventListener('click', function () {
+                let goalValue = document.getElementById('goalInput').value.trim();
+                let currentDate = new Date().toLocaleDateString();
+
+                if (goalValue) {
+                    addGoal(goalValue, currentDate); // This function will handle the creation and insertion of the goal
+                    saveGoal({ goal: goalValue, date: currentDate }); // Save to localStorage
+                    document.getElementById('goalInput').value = ''; // Clear the input
+                }
+            });
+        });
+
+        function loadGoals() {
+            let goals = JSON.parse(localStorage.getItem('goals')) || [];
+            goals.forEach(g => {
+                addGoal(g.goal, g.date);
+            });
+        }
+
+        function addGoal(goalValue, date) {
             // Creating the goal container
             let goalContainer = document.createElement('div');
             goalContainer.className = 'goal';
-            goalContainer.style.backgroundColor = '#fff';
-            goalContainer.style.marginTop = '20px';
-            goalContainer.style.padding = '15px';
-            goalContainer.style.borderRadius = '8px';
+            goalContainer.style.background = 'linear-gradient(135deg, #f7fafc, #edf2f7)';
+            goalContainer.style.padding = '20px';
+            goalContainer.style.borderRadius = '10px';
             goalContainer.style.display = 'flex';
             goalContainer.style.justifyContent = 'space-between';
             goalContainer.style.alignItems = 'center';
-            goalContainer.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            goalContainer.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.08)';
+            goalContainer.style.marginBottom = '20px';
 
-            // Creating the goal title
+            // Creating the goal title with date
             let goalTitle = document.createElement('div');
             goalTitle.className = 'goal-title';
+            goalTitle.style.flex = '2.5';
+            goalTitle.style.color = '#2d3748';
+            goalTitle.style.fontWeight = '500';
+            goalTitle.style.display = 'flex';
+            goalTitle.style.alignItems = 'center';
             goalTitle.textContent = goalValue;
-            goalTitle.style.flex = '2';
-            goalTitle.style.color = '#555';
-            goalTitle.style.fontWeight = 'bold';
+
+            let dateSpan = document.createElement('span');
+            dateSpan.textContent = ` (Added on ${date})`;
+            dateSpan.style.marginLeft = '10px';
+            dateSpan.style.fontWeight = '400';
+            dateSpan.style.color = '#718096';
+            goalTitle.appendChild(dateSpan);
 
             // Creating the "See Progress" button
             let goalProgressButton = document.createElement('button');
             goalProgressButton.className = 'goal-progress';
-            goalProgressButton.textContent = 'See Progress';
             goalProgressButton.style.flex = '1';
             goalProgressButton.style.padding = '10px';
             goalProgressButton.style.marginLeft = '10px';
             goalProgressButton.style.border = 'none';
-            goalProgressButton.style.borderRadius = '5px';
-            goalProgressButton.style.backgroundColor = '#4CAF50';
-            goalProgressButton.style.color = '#fff';
+            goalProgressButton.style.borderRadius = '8px';
             goalProgressButton.style.cursor = 'pointer';
-            goalProgressButton.style.transition = 'background-color 0.3s ease';
+            goalProgressButton.style.fontWeight = '500';
+            goalProgressButton.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            goalProgressButton.style.backgroundColor = '#48bb78';
+            goalProgressButton.style.color = '#fff';
+            goalProgressButton.textContent = 'See Progress';
             goalProgressButton.onmouseover = function () {
-                this.style.backgroundColor = '#43A047';
+                this.style.backgroundColor = '#38a169';
             };
             goalProgressButton.onmouseout = function () {
-                this.style.backgroundColor = '#4CAF50';
+                this.style.backgroundColor = '#48bb78';
             };
             goalProgressButton.addEventListener('click', function () {
-                window.location.href = 'Dashboard/ProgressTracker';
+                window.location.href = '/ProgressTracker';
             });
 
             // Creating the "Remove" button
             let removeButton = document.createElement('button');
             removeButton.className = 'remove-goal';
-            removeButton.textContent = 'Remove';
             removeButton.style.flex = '1';
             removeButton.style.padding = '10px';
             removeButton.style.marginLeft = '10px';
             removeButton.style.border = 'none';
-            removeButton.style.borderRadius = '5px';
-            removeButton.style.backgroundColor = '#F44336';
-            removeButton.style.color = '#fff';
+            removeButton.style.borderRadius = '8px';
             removeButton.style.cursor = 'pointer';
-            removeButton.style.transition = 'background-color 0.3s ease';
+            removeButton.style.fontWeight = '500';
+            removeButton.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            removeButton.style.backgroundColor = '#f56565';
+            removeButton.style.color = '#fff';
+            removeButton.textContent = 'Remove';
             removeButton.onmouseover = function () {
-                this.style.backgroundColor = '#E53935';
+                this.style.backgroundColor = '#e53e3e';
             };
             removeButton.onmouseout = function () {
-                this.style.backgroundColor = '#F44336';
+                this.style.backgroundColor = '#f56565';
             };
             removeButton.addEventListener('click', function () {
                 goalContainer.remove();
+                removeGoalFromStorage(goalValue, date);
             });
 
             // Appending the child elements to the goal container
@@ -99,11 +133,19 @@
 
             // Insert the new goal after the form
             document.querySelector('.add-goal-form').insertAdjacentElement('afterend', goalContainer);
-
-            // Clear the input
-            document.getElementById('goalInput').value = '';
         }
-    });
+
+        function saveGoal(goalObject) {
+            let goals = JSON.parse(localStorage.getItem('goals')) || [];
+            goals.push(goalObject);
+            localStorage.setItem('goals', JSON.stringify(goals));
+        }
+
+        function removeGoalFromStorage(goalValue, date) {
+            let goals = JSON.parse(localStorage.getItem('goals')) || [];
+            goals = goals.filter(g => g.goal !== goalValue || g.date !== date);
+            localStorage.setItem('goals', JSON.stringify(goals));
+        }
 </script>
 </body>
 </html>

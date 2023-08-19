@@ -568,7 +568,6 @@ C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitness
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\Views\ExerciseTracker\Index.cshtml.rz.scp.css
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\Views\GoalSetting\Index.cshtml.rz.scp.css
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css
-C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\Views\MealPlanner\Index.cshtml.rz.scp.css
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\bundle\MyFitnessCompanion.styles.css
 C:\Users\krasi\OneDrive - McGill University\Desktop\MyFitnessCompanion\MyFitnessCompanion\MyFitnessCompanion\obj\Debug\net7.0\scopedcss\projectbundle\MyFitnessCompanion.bundle.scp.css
