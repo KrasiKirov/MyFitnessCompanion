@@ -106,7 +106,7 @@ The dashboard is the heartbeat of MyFitnessCompanion, delivering users a central
   * Icons are emphasized in size and hue, resonating with the fitness theme and guiding user attention.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/4f99eea6-3a07-4f88-b061-1b3a223a9aae)
-## 📋 Exercise Tracker
+## 🏋️‍♂️ Exercise Tracker
 
 The Exercise Tracker is an essential feature of the platform. It's user-friendly, interactive, and data-centric, ensuring users have a seamless experience logging and managing their workouts.
 
@@ -176,7 +176,7 @@ The Exercise Tracker is an essential feature of the platform. It's user-friendly
 In summary, the Exercise Tracker offers a holistic, intuitive, and efficient means for users to log, view, and manage their workouts. The robust data management, combined with an elegant and interactive UI, enhances the overall user experience. Future enhancements could include categorizing exercises, integrating exercise metrics, or syncing with other fitness apps.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/1c1b899d-cb51-407f-ae87-cbf421b4a463)
-## 📋 Goal Setting
+## 🎯 Goal Setting
 
 The Goal Setting page is a vital component of the MyFitnessCompanion platform. Designed to inspire and facilitate users in defining their fitness journey, it seamlessly integrates goal management in one interactive platform.
 
@@ -245,7 +245,7 @@ The Goal Setting page is a vital component of the MyFitnessCompanion platform. D
 The Goal Setting page provides a comprehensive, user-centric, and efficient platform for users to articulate, oversee, and administer their fitness aspirations. A fusion of robust data management with a sleek, user-friendly UI culminates in a stellar user experience. Future iterations might encompass goal categorization, integration with progress trackers, or syncing capabilities with other modules of the app.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/cf27b3d7-65ce-42c1-b55e-ae6014a51849)
-## 📋 Progress Tracker
+## 📈 Progress Tracker
 
 The Progress Tracker is a stellar addition to the platform. With an emphasis on monitoring user progression towards their set objectives, it presents a user-friendly method to visually and efficiently track one's fitness journey.
 
