@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bIRsOlZRxOQBWBJPm+krpfZKDKPoUrgF9sBpYDk+dbmtJdX6grNDrFEB/eob0JPisKB8XuRPgc87yPeYwB9BlQ==",
+  "dgSpecHash": "Vq0cjZTn6U5rrNMwxbpyh/X91JklAMelykmTKVVTI2wpxzP7Hy7o1DjSIJ4o21B5SbIkCwOx79/gYlMDHAqm4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+  "projectFilePath": "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krasimir.kirov\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\krasimir.kirov\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

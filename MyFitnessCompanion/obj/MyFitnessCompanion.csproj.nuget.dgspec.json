@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {}
+    "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {
+    "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\MyFitnessCompanion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+        "projectUniqueName": "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
         "projectName": "MyFitnessCompanion",
-        "projectPath": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+        "projectPath": "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
         "packagesPath": "C:\\Users\\krasimir.kirov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\obj\\",
+        "outputPath": "C:\\Users\\krasimir.kirov\\Source\\Repos\\MyFitnessCompanio\\MyFitnessCompanion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krasimir.kirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
