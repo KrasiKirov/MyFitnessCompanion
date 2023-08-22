@@ -11026,11 +11026,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+      "projectUniqueName": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
       "projectName": "MyFitnessCompanion",
-      "projectPath": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+      "projectPath": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
       "packagesPath": "C:\\Users\\krasimir.kirov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\obj\\",
+      "outputPath": "C:\\Users\\krasimir.kirov\\Deskto\\MyFitnessCompanion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krasimir.kirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
