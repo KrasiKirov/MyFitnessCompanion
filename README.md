@@ -27,7 +27,6 @@ The home page adopts a clean and modern aesthetic with a harmonized color palett
 * Hover effects on buttons and feature cards add interactivity, providing a smooth and engaging experience for users.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/52653070-910c-480e-b994-aba30bd04bdd)
-
 ## 🔑 Login Page
 The login page is a critical component of "MyFitnessCompanion", providing the authentication gateway for registered users to access their personal data and tools.
 
@@ -61,13 +60,11 @@ The backend for the login feature utilizes ASP.NET Core Identity, offering a rob
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/aef80354-15aa-4fd3-9842-ac53e541043a)
 ### Registration
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/e4aa0dc3-dafb-4ca9-a072-c89390a652ff)
-
 ## 📖 About Page
 
 The About page is an integral part of MyFitnessCompanion, offering users a comprehensive overview of the platform, its mission, and the key features it boasts.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/9629ab3d-a990-4db4-9d95-f40b716c0787)
-
 ## 📊 Dashboard
 
 The dashboard is the heartbeat of MyFitnessCompanion, delivering users a centralized view of their fitness journey. It's aesthetically pleasing, intuitive, and interactive, designed to inspire users and facilitate quick access to major features.
@@ -109,7 +106,6 @@ The dashboard is the heartbeat of MyFitnessCompanion, delivering users a central
   * Icons are emphasized in size and hue, resonating with the fitness theme and guiding user attention.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/4f99eea6-3a07-4f88-b061-1b3a223a9aae)
-
 ## 📋 Exercise Tracker
 
 The Exercise Tracker is an essential feature of the platform. It's user-friendly, interactive, and data-centric, ensuring users have a seamless experience logging and managing their workouts.
@@ -179,8 +175,7 @@ The Exercise Tracker is an essential feature of the platform. It's user-friendly
 
 In summary, the Exercise Tracker offers a holistic, intuitive, and efficient means for users to log, view, and manage their workouts. The robust data management, combined with an elegant and interactive UI, enhances the overall user experience. Future enhancements could include categorizing exercises, integrating exercise metrics, or syncing with other fitness apps.
 
-![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/7faf7219-bd97-436c-91a5-60eb6320bc45)
-
+![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/1c1b899d-cb51-407f-ae87-cbf421b4a463)
 ## 📋 Goal Setting
 
 The Goal Setting page is a vital component of the MyFitnessCompanion platform. Designed to inspire and facilitate users in defining their fitness journey, it seamlessly integrates goal management in one interactive platform.
@@ -250,7 +245,6 @@ The Goal Setting page is a vital component of the MyFitnessCompanion platform. D
 The Goal Setting page provides a comprehensive, user-centric, and efficient platform for users to articulate, oversee, and administer their fitness aspirations. A fusion of robust data management with a sleek, user-friendly UI culminates in a stellar user experience. Future iterations might encompass goal categorization, integration with progress trackers, or syncing capabilities with other modules of the app.
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/cf27b3d7-65ce-42c1-b55e-ae6014a51849)
-
 ## 📋 Progress Tracker
 
 The Progress Tracker is a stellar addition to the platform. With an emphasis on monitoring user progression towards their set objectives, it presents a user-friendly method to visually and efficiently track one's fitness journey.
@@ -303,4 +297,65 @@ In essence, the Progress Tracker stands as an instrumental tool for users who wi
 
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/90c8c19b-6686-4391-a78e-a528f69460fb)
 ![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/238a0cfb-a6ad-480e-b071-770c5e5e8e98)
+## 🍽️ Nutrition Tracker
 
+The Nutrition Tracker is a pivotal component of MyFitnessCompanion, providing users with a comprehensive tool to monitor their nutritional intake and make informed dietary decisions. This feature combines a user-friendly interface with data-driven insights, empowering users to achieve their health goals.
+
+### Features and Functionalities:
+
+#### Responsive and Intuitive UI:
+* The interface dynamically adapts to various screen sizes, ensuring seamless usability.
+* Employing the "Segoe UI" font family contributes to a modern, clean look.
+
+#### Food Description Input:
+* Users can effortlessly input details about their meals, including descriptions of the food items consumed.
+* The "Analyze" button initiates data retrieval for nutritional analysis.
+
+#### Nutrition Data Display:
+* The feature visualizes nutritional information in a structured table format, including:
+  * Food Name
+  * Calories
+  * Protein Content (g)
+  * Fat Content (g)
+  * Carbohydrate Content (g)
+* The table incorporates zebra striping for improved readability, and hover effects enhance user interaction.
+
+#### Cumulative Nutrition Tracking:
+* Daily cumulative nutritional values are calculated and presented for quick reference.
+* Total Calories, Proteins, Fats, and Carbohydrates are displayed in a user-friendly format.
+
+#### Data Persistence and Storage:
+* The application employs **localStorage** to maintain a record of user-inputted food items and cumulative nutrition data.
+* Data is loaded into the table upon page load, ensuring continuity across sessions.
+
+### Styling Insights:
+
+#### Base Aesthetic:
+* The background gradient (linear) and color palette foster a visually pleasing backdrop for the content.
+* Dark text against the light background prioritizes content legibility.
+
+#### Input Form Styling:
+* The container arrangement streamlines the alignment and spacing of form elements.
+* Differentiation between labels and input fields is evident, enhancing user comprehension.
+* The "Analyze" button stands out with its vibrant color.
+
+#### Table Design:
+* The table's architecture promotes clear data representation.
+* Zebra striping enhances visual clarity, making it easier to distinguish between different rows.
+* Column widths are well-defined, maintaining a consistent and organized appearance.
+* The delete button is highlighted in red for visual emphasis and clear action.
+
+### Javascript Insights:
+
+#### Data Management:
+* Nutritional information for each food item is stored as objects in the foodEntries array.
+* The **addToTable** function dynamically adds food items to the table.
+* Cumulative nutritional data, encompassing calories, proteins, fats, and carbs, is meticulously updated and presented in real-time.
+
+#### Data Persistence:
+* The utilization of **localStorage** ensures that nutrition data remains accessible even after browser refreshes.
+* Upon page reload, previously saved food items are loaded into the table.
+
+The Nutrition Tracker isn't just an application feature—it's a powerful tool for informed dietary decisions. Combining a well-thought-out design, efficient data management, and responsive visuals, this feature provides users with a valuable resource to enhance their nutritional awareness. As the platform evolves, potential enhancements might include the integration of meal categorization, micronutrient tracking, or synchronization with external nutrition databases.
+
+![image](https://github.com/KrasiKirov/MyFitnessCompanion/assets/113156316/a4f8a538-1a53-49fe-833d-2ab231f0d74b)
