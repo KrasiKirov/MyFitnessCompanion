@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "Progress Tracker";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,11 +24,11 @@
         function loadProgressSections() {
             let goals = JSON.parse(localStorage.getItem('goals')) || [];
             goals.forEach(g => {
-                addProgressSection(g.goal);
+                addProgressSection(g.goal, g.initialValue, g.goalValue, g.progress);
             });
         }
 
-        function addProgressSection(goalTitle) {
+        function addProgressSection(goalTitle, initialValue = 0, goalValue = 0, progress = []) {
             let container = document.querySelector('.progress-container');
             container.style.maxWidth = '800px';
             container.style.margin = '50px auto';
@@ -91,6 +95,7 @@
             addButton.onmouseout = function () {
                 addButton.style.backgroundColor = '#48bb78';
             }
+
             let progressCount = 1;
             addButton.onclick = function () {
                 if (progressCount < 5) {
@@ -137,6 +142,28 @@
             progressBar.appendChild(progressFill);
             progressSection.appendChild(progressBar);
 
+            // Set initial value
+            initialValueInput.value = initialValue;
+
+            // Set the objective value
+            goalInput.value = goalValue;
+
+            // Set progress values
+            for (let i = 0; i < progress.length; i++) {
+                if (i > 0) {
+                    let newInput = document.createElement('input');
+                    newInput.type = "number";
+                    newInput.placeholder = `Progress ${i + 1}`;
+                    newInput.style.padding = '8px';
+                    newInput.style.border = '1px solid #d0d0d0';
+                    newInput.style.borderRadius = '4px';
+                    newInput.value = progress[i];
+                    inputGroup.appendChild(newInput);
+                } else {
+                    input.value = progress[i];
+                }
+            }
+
             let saveButton = document.createElement('button');
             saveButton.textContent = "Save Progress";
             saveButton.style.padding = '8px 12px';
@@ -172,6 +199,13 @@
                 }
             };
             progressSection.appendChild(saveButton);
+
+            // Populate progress bar based on the latest progress value (if any)
+            if (progress.length) {
+                let lastProgressValue = parseFloat(progress[progress.length - 1]);
+                let progressPercentage = ((lastProgressValue - initialValue) / (goalValue - initialValue)) * 100;
+                progressFill.style.width = `${Math.min(Math.max(progressPercentage, 0), 100)}%`; // Ensure it's between 0% and 100%
+            }
 
             container.appendChild(progressSection);
         }

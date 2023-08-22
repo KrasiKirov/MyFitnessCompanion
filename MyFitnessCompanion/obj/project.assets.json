@@ -11021,19 +11021,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\krasi\\.nuget\\packages\\": {}
+    "C:\\Users\\krasimir.kirov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+      "projectUniqueName": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
       "projectName": "MyFitnessCompanion",
-      "projectPath": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
-      "packagesPath": "C:\\Users\\krasi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krasi\\OneDrive - McGill University\\Desktop\\MyFitnessCompanion\\MyFitnessCompanion\\MyFitnessCompanion\\obj\\",
+      "projectPath": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\MyFitnessCompanion.csproj",
+      "packagesPath": "C:\\Users\\krasimir.kirov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krasimir.kirov\\Document\\MyFitnessCompanion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\krasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krasimir.kirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11105,7 +11105,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

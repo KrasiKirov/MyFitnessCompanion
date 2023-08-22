@@ -1,5 +1,181 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Nutrition tracker";
 }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutrition Tracker</h1>
+        <div class="input-fields">
+            <input type="text" id="foodDescription" placeholder="Describe your meal...">
+            <button onclick="analyzeFood()">Analyze</button>
+            <button onclick="resetData()">Reset</button>
+        </div>
+
+        <table id="nutritionTable">
+            <thead>
+                <tr>
+                    <th>Food Name</th>
+                    <th>Calories</th>
+                    <th>Proteins (g)</th>
+                    <th>Fats (g)</th>
+                    <th>Carbs (g)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot id="tablePlaceholder">
+                <tr>
+                    <td colspan="5" style="text-align:center;">No nutrition data available. Please add a food item.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="totals">
+            <h3>Cumulative Nutrition Data Today:</h3>
+            <ul>
+                <li>Total Calories: <span id="totalCalories">0</span></li>
+                <li>Total Proteins: <span id="totalProteins">0</span> g</li>
+                <li>Total Fats: <span id="totalFats">0</span> g</li>
+                <li>Total Carbs: <span id="totalCarbs">0</span> g</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const API_ENDPOINT = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
+        const API_KEY = '0220ebbce273fd88f7cfb4b9021d38a7';
+        const APP_ID = '6f2bc7e8';
+
+        let cumulativeTotals = {
+            calories: 0,
+            proteins: 0,
+            fats: 0,
+            carbs: 0
+        };
+
+        // Load data from localStorage
+        let storedData = JSON.parse(localStorage.getItem('nutritionData'));
+
+        if (storedData) {
+            cumulativeTotals = storedData.cumulativeTotals;
+
+            for (let food of storedData.foodEntries) {
+                addToTable(food);
+                updateCumulativeTotals(food.calories, food.proteins, food.fats, food.carbs);
+            }
+        }
+
+        function addToTable(food) {
+            const tableBody = document.querySelector('#nutritionTable tbody');
+            const newRow = tableBody.insertRow();
+
+            newRow.insertCell(0).innerText = food.foodName;
+            newRow.insertCell(1).innerText = food.calories;
+            newRow.insertCell(2).innerText = food.proteins;
+            newRow.insertCell(3).innerText = food.fats;
+            newRow.insertCell(4).innerText = food.carbs;
+
+            // Hide the table placeholder
+            document.getElementById('tablePlaceholder').style.display = 'none';
+        }
+
+        function updateLocalStorage(food) {
+            let storedData = JSON.parse(localStorage.getItem('nutritionData')) || { cumulativeTotals: {}, foodEntries: [] };
+
+            storedData.cumulativeTotals = cumulativeTotals;
+            storedData.foodEntries.push(food);
+
+            localStorage.setItem('nutritionData', JSON.stringify(storedData));
+        }
+
+        function updateCumulativeTotals(calories, proteins, fats, carbs) {
+            cumulativeTotals.calories += calories;
+            cumulativeTotals.proteins += proteins;
+            cumulativeTotals.fats += fats;
+            cumulativeTotals.carbs += carbs;
+
+            document.getElementById('totalCalories').innerText = cumulativeTotals.calories.toFixed(2);
+            document.getElementById('totalProteins').innerText = cumulativeTotals.proteins.toFixed(2);
+            document.getElementById('totalFats').innerText = cumulativeTotals.fats.toFixed(2);
+            document.getElementById('totalCarbs').innerText = cumulativeTotals.carbs.toFixed(2);
+        }
+
+        function analyzeFood() {
+            const foodDescription = document.getElementById('foodDescription').value;
+
+            // Use the Fetch API to make the request
+            fetch(API_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-app-id': APP_ID,
+                    'x-app-key': API_KEY
+                },
+                body: JSON.stringify({
+                    query: foodDescription
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const firstFoodItem = data.foods[0];
+
+                    const food = {
+                        foodName: firstFoodItem.food_name,
+                        calories: firstFoodItem.nf_calories,
+                        proteins: firstFoodItem.nf_protein,
+                        fats: firstFoodItem.nf_total_fat,
+                        carbs: firstFoodItem.nf_total_carbohydrate
+                    };
+
+                    addToTable(food);
+                    updateCumulativeTotals(food.calories, food.proteins, food.fats, food.carbs);
+
+                    updateLocalStorage(food);
+
+                    // Optionally, clear the input field after adding
+                    document.getElementById('foodDescription').value = '';
+                })
+                .catch(error => {
+                    console.error('Error fetching nutrition data:', error);
+                });
+        }
+
+        function resetData() {
+            // Reset cumulative totals
+            cumulativeTotals = {
+                calories: 0,
+                proteins: 0,
+                fats: 0,
+                carbs: 0
+            };
+
+            // Update the displayed totals
+            document.getElementById('totalCalories').innerText = '0';
+            document.getElementById('totalProteins').innerText = '0';
+            document.getElementById('totalFats').innerText = '0';
+            document.getElementById('totalCarbs').innerText = '0';
+
+            // Clear the table contents
+            const tableBody = document.querySelector('#nutritionTable tbody');
+            while (tableBody.firstChild) {
+                tableBody.removeChild(tableBody.firstChild);
+            }
+
+            // Remove data from localStorage
+            localStorage.removeItem('nutritionData');
+
+            // Show the table placeholder
+            document.getElementById('tablePlaceholder').style.display = 'table-footer-group';
+        }
+
+    </script>
+</body>
+</html>

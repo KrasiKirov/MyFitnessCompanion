@@ -1,0 +1,111 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #f3f8fe, #e7eff5);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.input-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    flex: 2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+    input[type="text"]:focus, input[type="number"]:focus {
+        border: 1px solid #007BFF;
+    }
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+
+    button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.totals {
+    margin-top: 30px;
+}
+
+    .totals h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #555;
+        font-weight: 600;
+    }
+
+    .totals ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .totals li {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .totals span {
+        font-weight: 600;
+        color: #4CAF50;
+    }
