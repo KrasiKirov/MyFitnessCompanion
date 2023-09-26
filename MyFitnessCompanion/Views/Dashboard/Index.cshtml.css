@@ -1,6 +1,6 @@
 ﻿body {
     font-family: Arial, sans-serif;
-    background-color: #f4f5f7; /* Slightly different shade for better visibility */
+    background-color: #f4f5f7;
     margin: 0;
     padding: 0;
 }
@@ -31,10 +31,10 @@
 
     .card i {
         margin-bottom: 10px;
-        margin-right: 0; /* We no longer need the right margin as we're centering everything */
+        margin-right: 0;
     }
 
-    .card div { /* Added this rule to wrap the text and allow for proper centering */
+    .card div {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,15 +49,15 @@
     .card h2 {
         margin: 0;
         font-size: 24px;
-        flex-grow: 1; /* Takes up remaining space after icon */
+        flex-grow: 1;
     }
 
     .card p {
-        color: #7a7a7a; /* Slightly greyed out text for a softer look */
+        color: #7a7a7a;
     }
 
     .card i {
         margin-right: 20px;
         font-size: 2em;
-        color: #4CAF50; /* A green shade for a fitness theme */
+        color: #4CAF50;
     }
