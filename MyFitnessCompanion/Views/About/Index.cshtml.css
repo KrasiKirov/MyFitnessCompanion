@@ -40,23 +40,23 @@ p {
 .feature-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* added gap property for modern browsers */
+    gap: 20px;
     justify-content: space-between;
 }
 
 .feature-card {
     background: #f9f9f9;
-    border-radius: 10px; /* increased the border radius */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* increased box shadow for more depth */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex: 1;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
     .feature-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced hover shadow */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
 .icon-container {
@@ -92,6 +92,5 @@ p {
 p {
     margin-bottom: 1.5rem;
     text-align: justify;
-    /* This helps with handling the last line of justified text */
     text-justify: inter-word;
 }
