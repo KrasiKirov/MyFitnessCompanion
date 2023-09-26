@@ -31,7 +31,7 @@ div.form-container {
 
 label {
     margin: 10px 10px 10px 0;
-    flex: none; /* This prevents the label from flexing */
+    flex: none;
     font-weight: 500;
     justify-content: space-between;
 }
@@ -49,8 +49,8 @@ button {
 
 button {
     margin: 20px auto;
-    flex: none; /* This prevents the button from flexing and taking full width */
-    padding: 10px 20px; /* Horizontal padding adjusted to make the button wider */
+    flex: none;
+    padding: 10px 20px;
     background-color: #4CAF50;
     border: none;
     color: white;
